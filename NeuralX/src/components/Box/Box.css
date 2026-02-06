@@ -1,10 +1,10 @@
 /* The main container for the entire section */
 .box-section-container {
-    border: 1px solid red;;
     background-color: #fffbfb; 
     width: 100vw;
     max-width: 100%;
-    padding: 40px 20px;
+    padding: 10px 40px 40px 15px;
+    justify-content: center;
     
     display: flex;
     flex-direction: column;
@@ -12,38 +12,39 @@
 
     /* Add top margin so it doesn't get stuck behind your NavBar */
     margin-top: 0; 
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 /* --- Styles for the Main Large Box --- */
 .submission-box {
     background-color: #ffffff;
     border-radius: 25px;
-    padding: 50px;
-    width: 90%;
-    max-width: 900px;
+    padding: 60px;
+    width: 100%;
+    max-width: 1100px;
     
     box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     
     text-align: center;
-    margin-bottom: 40px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 350px;
+    margin-bottom: 25px;
 }
 
 .submission-box h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .submission-box p {
     color: #7f8c8d;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Placeholder Button Style */
@@ -60,7 +61,7 @@
 .small-boxes-container {
     display: flex;
     gap: 25px;
-    width: 90%;
+    width: 100%;
     max-width: 1100px;
     flex-wrap: wrap;
     justify-content: center;
