@@ -1,0 +1,9 @@
+.health-score-meter {
+    position: absolute;
+    right: 35px;
+    top: 150px;
+}
+.mt-2 {
+    position: relative;
+    left: 27px;
+}
