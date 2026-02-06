@@ -1,11 +1,24 @@
 import { useState } from 'react'
+import NavBar from './components/NavBar/NavBar'
+import Background from './components/Background/Background' 
+import Box from './components/Box/Box'
 import './App.css'
-import NavBar from './components/NavBar/NavBar.jsx'
 
-export default function App() {
+function App() {
   return (
-   <>
-    <NavBar/>
-    </>
+    <div>
+
+      <Background />
+      
+      <NavBar />
+      <Box /> 
+      
+    </div>
   )
 }
+
+export default App
+
+
+
+
