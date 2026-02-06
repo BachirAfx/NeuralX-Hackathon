@@ -1,6 +1,5 @@
 /* The main container for the entire section */
 .box-section-container {
-    border: 1px solid red;;
     background-color: #fffbfb; 
     width: 100vw;
     max-width: 100%;
