@@ -7,9 +7,8 @@ const Box = () => {
       
       {/* --- 1. The Main Large Box (For Report Submission) --- */}
       <div className="submission-box">
-        <h2>Upload Blood Report</h2>
+        <h2>Lets Review Your Blood Report</h2>
         <p>Drag and drop your PDF or image here to start parsing.</p>
-        <div className="placeholder-button">Upload Button Area</div>
       </div>
 
       {/* --- 2. The Container for Small Boxes Below --- */}
