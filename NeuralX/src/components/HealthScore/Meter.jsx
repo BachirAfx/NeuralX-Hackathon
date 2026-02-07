@@ -57,12 +57,23 @@ function HealthScoreMeter({ score }) {
           {score}
         </text>
       </svg>
-
-      {score < 70 ? (
-        <p className="mt-2 text-muted">
-        Health Score
-      </p>
-      ):null}
+      <div className="score-label">
+        {score >= 70 ? (
+          <p className="mt-2 text-muted">
+          Healthy
+        </p>
+        ):null}
+        {score < 70 && score >= 40 ? (
+          <p className="mt-2 text-muted">
+          Needs Improvement
+        </p>
+        ):null}
+        {score < 40 ? (
+          <p className="mt-2 text-muted">
+          Urgent Attention needed
+        </p>
+        ):null}
+      </div>
     </div>
   );
 }

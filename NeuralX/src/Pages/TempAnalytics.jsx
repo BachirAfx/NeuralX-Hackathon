@@ -25,12 +25,12 @@ function TempAnalytics() {
             <NavBar/>
             <AnalyseFurther/>
 
-            <div className="container mt-5 text-right">
+            <div className="container mt-5">
             {/* <h2>Overall Health Summary</h2> */}
 
       {score === null ? (
         <>
-          <div className="spinner-border mt-3"></div>
+          <div className="spinner-border mt-3 text-center"></div>
           <p className="mt-3">Analyzing your report…</p>
         </>
       ) : (

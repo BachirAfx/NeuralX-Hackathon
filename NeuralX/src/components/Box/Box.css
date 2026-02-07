@@ -89,3 +89,12 @@
     color: #7f8c8d;
     line-height: 1.5;
 }
+
+.upload-button {
+    padding: 10px 30px;
+    background-color: #ececec;
+    border-radius: 12px;
+    color: #555;
+    font-weight: 600;
+    border: none;
+}

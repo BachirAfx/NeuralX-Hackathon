@@ -7,3 +7,7 @@
     position: relative;
     left: 27px;
 }
+.score-label {
+    position: absolute;
+    left: 18px;
+}

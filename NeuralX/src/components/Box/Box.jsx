@@ -1,7 +1,47 @@
 import React from 'react';
 import './Box.css'; // Import the renamed CSS file
+import { useRef } from "react";
+
 
 const Box = () => {
+  const fileInputRef = useRef(null);
+
+
+  // Open file picker
+  const handleClick = () => {
+    fileInputRef.current.click();
+  };
+
+  // When file is selected
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    console.log("Selected file:", file);
+
+    // Send file wherever you want
+    uploadFile(file);
+  };
+
+  // Upload logic
+  const uploadFile = async (file) => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("http://localhost:5000/analyze-report", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+      console.log("Structured Data:", data);
+    } catch (err) {
+      console.error("Error analyzing report:", err);
+    }
+  };
+
   return (
     <div className="box-section-container">
       
@@ -9,6 +49,14 @@ const Box = () => {
       <div className="submission-box">
         <h2>Lets Review Your Blood Report</h2>
         <p>Drag and drop your PDF or image here to start parsing.</p>
+        <div className="placeholder-button">
+          {/*Hidden file input*/}
+          <input type="file" ref={fileInputRef} style={{ display: "none", }} onChange={handleFileChange}/>
+          {/*Button*/}
+          <button className="upload-button" onClick={handleClick}>
+            Upload your Report
+          </button>
+        </div>
       </div>
 
       {/* --- 2. The Container for Small Boxes Below --- */}
