@@ -1,0 +1,17 @@
+.analyse-button {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    background-color: #4898da; 
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 200px;
+}
